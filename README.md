@@ -10,3 +10,5 @@ https://www.youtube.com/watch?v=lETqSCimcyM
 
 After watching Bald Guy DIY, I was able to use his notes to modify Howchoo's scripts. And to be able to make it easier to load using Howchoo's instructions, 
 I have basiaclly copied his entire repository (https://github.com/Howchoo/pi-power-button) and modified the install and uninstall to match my new scripts.
+
+This script that I am using wires to the GPIO header.  Specifically GPIO 14 (physical pin 8) and GND (physical pin 6).
