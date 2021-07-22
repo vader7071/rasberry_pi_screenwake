@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 #! /bin/sh
 
 ### BEGIN INIT INFO
