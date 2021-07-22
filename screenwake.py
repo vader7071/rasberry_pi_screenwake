@@ -9,9 +9,11 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(14, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.wait_for_edge(14, GPIO.FALLING)
 
+from subprocess import run
 run('vcgencmd display_power 1', shell=True)
 
+# from "Howchoo"
 # subprocess.call(['shutdown', '-h', 'now'], shell=False)
 
-# from subprocess import run
+# from "Bald Guy DIY"
 # run('vcgencmd display_power 0', shell=True)
