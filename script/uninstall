@@ -1,0 +1,15 @@
+#! /bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+echo "=> Stopping Screen Wakeup Listener...\n"
+sudo update-rc.d screenwake.sh remove
+sudo /etc/init.d/screenwake.sh stop
+
+echo "=> Removing Screen Wakeup Listener...\n"
+sudo rm -rf /usr/local/bin/screenwake.py 
+sudo rm -rf /etc/init.d/screenwake.sh 
+
+echo "Screen Wakeup Listener uninstalled.\n"

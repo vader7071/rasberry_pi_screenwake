@@ -1,0 +1,18 @@
+#! /bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+echo "=> Installing Screen Wakeup Listener...\n"
+sudo cp screenwake.py /usr/local/bin/
+sudo chmod +x /usr/local/bin/screenwake.py
+
+echo "=> Starting Screen Wakeup Listener...\n"
+sudo cp screenwake.sh /etc/init.d/
+sudo chmod +x /etc/init.d/screenwake.sh
+
+sudo update-rc.d screenwake.sh defaults
+sudo /etc/init.d/screenwake.sh start
+
+echo "Screen Wakeup Listener installed.\n"
