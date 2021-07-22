@@ -1,0 +1,9 @@
+Installation
+Connect to your Raspberry Pi via SSH
+Clone this repo: git clone https://github.com/vader7071/rasberry_pi_screenwake.git
+Run the setup script: ./rasberry_pi_screenwake/script/install
+
+Uninstallation
+If you need to uninstall the power button script in order to use GPIO14 for another project or something:
+
+Run the uninstall script: ./rasberry_pi_screenwake/script/uninstall
