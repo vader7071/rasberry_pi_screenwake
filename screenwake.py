@@ -1,19 +1,19 @@
 #!/usr/bin/env python
 
-
 import RPi.GPIO as GPIO
-import subprocess
+from subprocess import run
+from time import time
+from time import sleep
 
 # setup GPIO pin - Using GPIO pin 14 (physical pin 8)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(14, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.wait_for_edge(14, GPIO.FALLING)
 
-from subprocess import run
+# Commands to wake screen and sleep screen after 5 minutes
 run('vcgencmd display_power 1', shell=False)
 
 ##### Time Delay to turn screen off #####
-# import time
 #
 # counter = 300 # 5 minutes
 # start = time.time()
@@ -28,9 +28,3 @@ run('vcgencmd display_power 1', shell=False)
 #            run('vcgencmd display_power 0', shell=False)
 #            break
 #########################################
-
-# from "Howchoo"
-# subprocess.call(['shutdown', '-h', 'now'], shell=False)
-
-# from "Bald Guy DIY"
-# run('vcgencmd display_power 0', shell=True)
