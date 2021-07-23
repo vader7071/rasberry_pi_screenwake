@@ -14,14 +14,14 @@
 case "$1" in
   start)
     echo "Starting screenwake.py"
-    /home/pi/screenwake.py &
+    /usr/local/bin/screenwake.py &
     ;;
   stop)
     echo "Stopping screenwake.py"
-    pkill -f /home/pi/screenwake.py
+    pkill -f /usr/local/bin/screenwake.py
     ;;
   *)
-    echo "Usage: /home/pi/screenwake.sh {start|stop}"
+    echo "Usage: /etc/init.d/screenwake.sh {start|stop}"
     exit 1
     ;;
 esac
